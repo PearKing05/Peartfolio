@@ -1,2 +1,0 @@
-# Peartfolio
-the pearking portfolio
