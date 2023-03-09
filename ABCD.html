@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" id="backdrop">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style>
+    <script>
+        function Myfunction(a,b) {
+            
+            var id = a;
+            var selectedcolor = b;
+            var selectedelement = document.getElementById(id)
+            if (document.getElementById("a").classList.contains("on") || document.getElementById("b").classList.contains("on") || document.getElementById("c").classList.contains("on") || document.getElementById("d").classList.contains("on")) {
+                document.getElementById("backdrop").style.backgroundColor = "black";
+            } else {
+                document.getElementById("backdrop").style.backgroundColor = "#222222"
+            }
+            if (selectedelement.classList.contains("on")) {
+                selectedelement.classList = "letter off";
+            } else {
+                selectedelement.classList = "letter on";
+            }
+            if (document.getElementById("a").classList.contains("on") || document.getElementById("b").classList.contains("on") || document.getElementById("c").classList.contains("on") || document.getElementById("d").classList.contains("on")) {
+                document.getElementById("backdrop").style.backgroundColor = "black";
+            } else {
+                document.getElementById("backdrop").style.backgroundColor = "#222222"
+            }
+                
+        }
+    </script>
+    <style>
+        html {
+            background-color:#222222;
+            user-select: none;
+            height:90vh;
+            transition: 0.5s;
+        }
+        
+        body {
+            align-content: space-around;
+            flex-wrap:wrap;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            height:100%;
+        }
+            
+        .letter {
+            font-family: 'Bebas Neue', cursive;
+            display:flex;
+            flex-direction:row;
+            size: 1in;
+            font-size: 2in;
+            padding: 0.5in;
+            height:2in;
+            transition:0.5s;
+        }
+        .on {
+            color: var(--color);
+            text-shadow: 0px 0px 15px var(--color);
+        }
+        .on:hover {
+            text-shadow: 0px 0px 15px var(--color);
+        }
+        p {
+            height:2in;
+            margin:0;
+            transition: 0.5s;
+        }
+        
+    </style>
+    <title>ABCD</title>
+</head>
+<body id="background">
+    <div class="letter off" id="a" style="--color:red;" onclick="Myfunction('a','red');">
+        <p>
+            A
+        </p>
+    </div>
+    <div class="letter off" id="b" style="--color:green;" onclick="Myfunction('b','green');">
+        <p>
+            B
+        </p>
+    </div>
+    <div class="letter off" id="c" style="--color:blue;" onclick="Myfunction('c','blue');">
+        <p>
+            C
+        </p>
+    </div>
+    <div class="letter off" id="d" style="--color:magenta;" onclick="Myfunction('d','magenta');">
+        <p>
+            D
+        </p>
+    </div>
+</body>
+</html>
